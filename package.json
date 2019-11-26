@@ -1,8 +1,7 @@
 {
-  "name": "PianoTiles-migrate",
+  "name": "basic-webpack-template",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "description": "", 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode development",
