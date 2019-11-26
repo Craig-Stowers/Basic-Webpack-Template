@@ -11,37 +11,36 @@ module.exports = {
    devServer: {
       contentBase: './dist',
       open: true
-    },
+   },
    module: {
       rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env']
+         {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+               loader: 'babel-loader',
+               options: {
+               presets: ['@babel/preset-env']
+               }
             }
-          }
-        },
+         },
          {
             test: /\.css$/,
             use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
-         } ,
+         },
          {
             test: /\.(png|jpg|gif)$/,
             use: [
-              {
-                loader: 'file-loader'
-              },
+               {
+                  loader: 'file-loader'
+               },
             ],
-          }
-                
+         }                
       ]      
-    },
+   },
    plugins: [
       new HtmlWebpackPlugin({
-      title: "Webpack Output",
+         title: "Webpack Output",
       }),
       new CleanWebpackPlugin()
    ],
